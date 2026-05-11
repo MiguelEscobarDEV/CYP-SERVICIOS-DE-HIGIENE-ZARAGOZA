@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <!-- =============================================
+       SEO META TAGS
+       Modifica title, description y keywords cuando
+       tengas más información sobre la empresa.
+  ============================================= -->
+  <title>C&P Servicios de Higiene Zaragoza | Limpieza Profesional</title>
+  <meta name="description" content="C&amp;P Servicios de Higiene Zaragoza. Empresa familiar de limpieza profesional en Zaragoza y toda la provincia de Aragón. Cristales, fin de obra, comunidades, oficinas e industria. Pide presupuesto sin compromiso." />
+  <meta name="keywords" content="limpieza Zaragoza, empresa limpieza Zaragoza, limpieza cristales, limpieza fin de obra, limpieza comunidades, limpieza oficinas, limpieza industrial" />
+  <meta name="author" content="C&P Servicios de Higiene Zaragoza" />
+
+  <!-- Open Graph (para compartir en redes sociales) -->
+  <meta property="og:title" content="C&P Servicios de Higiene Zaragoza" />
+  <meta property="og:description" content="Empresa familiar de limpieza profesional en Zaragoza. Pide tu presupuesto sin compromiso." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cyplimpiezas.com" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       VARIABLES Y RESET GLOBAL
+       Paleta basada en el azul del logo C&P.
+       Investigación: azul = confianza y profesionalidad
+       en sector de limpieza B2B/B2C.
+    ============================================= */
+    :root {
+      --azul-principal: #1a3fad;   /* Azul corporativo principal */
+      --azul-oscuro:    #0d2270;   /* Azul oscuro para fondos y contraste */
+      --azul-medio:     #2a55d4;   /* Azul medio para degradados */
+      --azul-claro:     #e8eeff;   /* Azul muy claro para fondos suaves */
+      --blanco:         #ffffff;
+      --gris-claro:     #f4f6fb;
+      --gris-medio:     #e2e7f5;
+      --gris-texto:     #6b7494;
+      --negro-suave:    #111827;
+      --whatsapp:       #25d366;   /* Verde WhatsApp oficial */
+      --sombra:         0 4px 24px rgba(26,63,173,0.12);
+      --sombra-fuerte:  0 8px 40px rgba(26,63,173,0.22);
+      --radio:          12px;
+      --transicion:     0.3s ease;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Sora', sans-serif;
+      font-weight: 400;
+      color: var(--negro-suave);
+      background: var(--blanco);
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    /* =============================================
+       UTILIDADES GENERALES
+    ============================================= */
+    .contenedor {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Etiqueta pequeña de sección */
+    .etiqueta-seccion {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--azul-principal);
+      background: var(--azul-claro);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .etiqueta-seccion.clara {
+      color: var(--azul-claro);
+      background: rgba(255,255,255,0.12);
+    }
+
+    /* Título de sección */
+    .titulo-seccion {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.18;
+      color: var(--negro-suave);
+      margin-bottom: 1rem;
+    }
+
+    .titulo-seccion.claro {
+      color: var(--blanco);
+    }
+
+    .titulo-seccion span {
+      color: var(--azul-principal);
+    }
+
+    .subtitulo-seccion {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--gris-texto);
+      max-width: 540px;
+    }
+
+    .subtitulo-seccion.claro {
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* Separador decorativo */
+    .separador {
+      width: 48px;
+      height: 4px;
+      background: var(--azul-principal);
+      border-radius: 2px;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .separador.claro { background: var(--blanco); }
+
+    /* =============================================
+       BOTONES
+       Todos los CTAs llevan al WhatsApp de empresa.
+       NOTA: Sustituir href="#whatsapp-placeholder"
+       por el enlace real cuando tengas el número.
+       Formato: https://wa.me/34XXXXXXXXX?text=Mensaje
+    ============================================= */
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      padding: 0.85rem 1.8rem;
+      border-radius: var(--radio);
+      transition: transform var(--transicion), box-shadow var(--transicion), background var(--transicion);
+      cursor: pointer;
+      white-space: nowrap;
+      border: none;
+    }
+
+    /* Variante principal: fondo WhatsApp verde */
+    .btn-whatsapp.principal {
+      background: var(--whatsapp);
+      color: var(--blanco);
+      box-shadow: 0 4px 18px rgba(37,211,102,0.35);
+    }
+
+    .btn-whatsapp.principal:hover {
+      background: #1fb558;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.45);
+    }
+
+    /* Variante secundaria: contorno azul */
+    .btn-whatsapp.secundario {
+      background: transparent;
+      color: var(--azul-principal);
+      border: 2px solid var(--azul-principal);
+    }
+
+    .btn-whatsapp.secundario:hover {
+      background: var(--azul-principal);
+      color: var(--blanco);
+      transform: translateY(-2px);
+    }
+
+    /* Variante blanca (sobre fondo azul oscuro) */
+    .btn-whatsapp.blanco {
+      background: var(--blanco);
+      color: var(--azul-oscuro);
+    }
+
+    .btn-whatsapp.blanco:hover {
+      background: var(--azul-claro);
+      transform: translateY(-2px);
+    }
+
+    /* Icono WhatsApp SVG inline */
+    .icono-wa {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    /* =============================================
+       NAVEGACIÓN
+    ============================================= */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      transition: background var(--transicion), box-shadow var(--transicion);
+    }
+
+    /* Clase que se añade con JS al hacer scroll */
+    header.scrolled {
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--sombra);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 2rem;
+      max-width: 1160px;
+      margin: 0 auto;
+      gap: 1.5rem;
+    }
+
+    /* ── Logo en nav ── */
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    /*
+      LOGO: Sustituye el src por la ruta real a tu logo.
+      El archivo Logo.png tiene fondo negro. Cuando lo
+      pongas en producción, exporta una versión con fondo
+      transparente para que quede mejor.
+    */
+    .nav-logo img {
+      height: 42px;
+      width: auto;
+      /* filter: brightness(0) invert(1); — activa esto si el fondo es claro y el logo es oscuro */
+    }
+
+    .nav-logo-texto {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .nav-logo-nombre {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--azul-oscuro);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-logo-sub {
+      font-size: 0.62rem;
+      font-weight: 400;
+      color: var(--gris-texto);
+      letter-spacing: 0.08em;
+    }
+
+    /* ── Links de navegación ── */
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--negro-suave);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity var(--transicion), color var(--transicion);
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      color: var(--azul-principal);
+    }
+
+    /* ── CTA en nav ── */
+    .nav-cta {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      padding: 0.55rem 1.2rem;
+      border-radius: var(--radio);
+      background: var(--whatsapp);
+      color: var(--blanco);
+      transition: background var(--transicion), transform var(--transicion);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: #1fb558;
+      transform: translateY(-1px);
+    }
+
+    /* ── Menú hamburguesa (móvil) ── */
+    .hamburguesa {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 4px;
+      cursor: pointer;
+    }
+
+    .hamburguesa span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--negro-suave);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* Menú móvil abierto */
+    .nav-movil {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      background: var(--blanco);
+      border-top: 1px solid var(--gris-medio);
+      padding: 1rem 2rem 1.5rem;
+    }
+
+    .nav-movil.abierto { display: flex; }
+
+    .nav-movil a {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--negro-suave);
+      text-decoration: none;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--gris-medio);
+      transition: color var(--transicion);
+    }
+
+    .nav-movil a:last-child { border-bottom: none; }
+    .nav-movil a:hover { color: var(--azul-principal); }
+
+    /* =============================================
+       HERO — SECCIÓN PRINCIPAL
+    ============================================= */
+    #inicio {
+      min-height: 100vh;
+      background:
+        /* Capa de gradiente azul oscuro */
+        linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-principal) 55%, var(--azul-medio) 100%);
+      display: flex;
+      align-items: center;
+      padding: 7rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Patrón geométrico decorativo de fondo */
+    #inicio::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 75% 20%, rgba(255,255,255,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.04) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    /* Círculo decorativo grande */
+    #inicio::after {
+      content: '';
+      position: absolute;
+      right: -120px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      pointer-events: none;
+    }
+
+    .hero-contenedor {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .hero-texto { }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      animation: aparecer 0.7s ease 0.2s forwards;
+    }
+
+    .hero-badge .punto {
+      width: 7px; height: 7px;
+      background: var(--whatsapp);
+      border-radius: 50%;
+      animation: parpadeo 2s ease infinite;
+    }
+
+    @keyframes parpadeo {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero-titulo {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--blanco);
+      margin-bottom: 1.4rem;
+      opacity: 0;
+      animation: subirFadeIn 0.8s ease 0.4s forwards;
+    }
+
+    .hero-titulo .acento {
+      color: #7eb8ff; /* Azul claro para contraste sobre fondo oscuro */
+    }
+
+    .hero-descripcion {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 2.2rem;
+      max-width: 480px;
+      opacity: 0;
+      animation: subirFadeIn 0.8s ease 0.6s forwards;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: subirFadeIn 0.8s ease 0.8s forwards;
+    }
+
+    /* ── Tarjeta imagen del hero ── */
+    .hero-imagen-wrap {
+      position: relative;
+      opacity: 0;
+      animation: aparecer 1s ease 0.5s forwards;
+    }
+
+    /*
+      IMAGEN HERO: Sustituye el src de esta imagen por
+      una foto real de tu equipo o de un trabajo realizado.
+      Dimensiones recomendadas: 600x500px aprox.
+    */
+    .hero-imagen-wrap img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: var(--sombra-fuerte);
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 6/5;
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* Tarjeta flotante "Empresa familiar" */
+    .hero-badge-flotante {
+      position: absolute;
+      bottom: -18px;
+      left: -20px;
+      background: var(--blanco);
+      border-radius: var(--radio);
+      padding: 0.9rem 1.2rem;
+      box-shadow: var(--sombra-fuerte);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .hero-badge-flotante .icono-f {
+      width: 40px; height: 40px;
+      background: var(--azul-claro);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .hero-badge-flotante strong {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--negro-suave);
+    }
+
+    .hero-badge-flotante span {
+      font-size: 0.68rem;
+      color: var(--gris-texto);
+    }
+
+    /* ── Estadísticas del hero ── */
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      opacity: 0;
+      animation: subirFadeIn 0.8s ease 1s forwards;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat-num {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--blanco);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.6);
+      margin-top: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── Animaciones globales ── */
+    @keyframes aparecer {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes subirFadeIn {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* =============================================
+       FRANJA DE CONFIANZA
+    ============================================= */
+    .franja-confianza {
+      background: var(--azul-oscuro);
+      padding: 1.1rem 2rem;
+      overflow: hidden;
+    }
+
+    .franja-interna {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .franja-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      white-space: nowrap;
+    }
+
+    .franja-item .check {
+      width: 18px; height: 18px;
+      background: var(--whatsapp);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      color: var(--blanco);
+      flex-shrink: 0;
+    }
+
+    /* =============================================
+       SECCIÓN NOSOTROS
+    ============================================= */
+    #nosotros {
+      padding: 6rem 2rem;
+      background: var(--blanco);
+    }
+
+    .nosotros-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    /*
+      IMAGEN NOSOTROS: Sustituye el src por una foto del
+      equipo (Miguel y Vanessa) o de un trabajo realizado.
+      Dimensiones recomendadas: 560x460px aprox.
+    */
+    .nosotros-imagen-wrap {
+      position: relative;
+    }
+
+    .nosotros-imagen-wrap img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: var(--sombra-fuerte);
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 5/4;
+      background: var(--gris-claro);
+    }
+
+    /* Tarjeta flotante de valores */
+    .nosotros-tarjeta-flotante {
+      position: absolute;
+      bottom: -22px;
+      right: -22px;
+      background: var(--azul-principal);
+      color: var(--blanco);
+      border-radius: var(--radio);
+      padding: 1.2rem 1.5rem;
+      box-shadow: var(--sombra-fuerte);
+      max-width: 200px;
+    }
+
+    .nosotros-tarjeta-flotante strong {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .nosotros-tarjeta-flotante span {
+      font-size: 0.72rem;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+
+    .nosotros-texto { }
+
+    .nosotros-propietarios {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .propietario {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: var(--gris-claro);
+      border-radius: var(--radio);
+      padding: 0.75rem 1rem;
+      flex: 1;
+    }
+
+    .propietario-avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: var(--azul-principal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--blanco);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .propietario-info strong {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--negro-suave);
+    }
+
+    .propietario-info span {
+      font-size: 0.65rem;
+      color: var(--gris-texto);
+    }
+
+    /* =============================================
+       SECCIÓN SERVICIOS
+    ============================================= */
+    #servicios {
+      padding: 6rem 2rem;
+      background: var(--gris-claro);
+    }
+
+    .servicios-cabecera {
+      max-width: 1160px;
+      margin: 0 auto 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* Grid de tarjetas de servicio */
+    .servicios-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* Tarjeta individual de servicio */
+    .servicio-tarjeta {
+      background: var(--blanco);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--sombra);
+      transition: transform var(--transicion), box-shadow var(--transicion);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid transparent;
+    }
+
+    .servicio-tarjeta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--azul-oscuro), var(--azul-medio));
+      opacity: 0;
+      transition: opacity var(--transicion);
+    }
+
+    .servicio-tarjeta:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--sombra-fuerte);
+      border-color: var(--gris-medio);
+    }
+
+    .servicio-tarjeta:hover::before {
+      opacity: 1;
+    }
+
+    /* Tarjeta destacada (última, ocupa 2 columnas) */
+    .servicio-tarjeta.destacada {
+      grid-column: span 2;
+      background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-principal) 100%);
+      color: var(--blanco);
+    }
+
+    .servicio-tarjeta.destacada .servicio-titulo,
+    .servicio-tarjeta.destacada .servicio-texto {
+      color: var(--blanco);
+    }
+
+    .servicio-tarjeta.destacada .servicio-texto {
+      opacity: 0.82;
+    }
+
+    .servicio-tarjeta.destacada .servicio-icono {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .servicio-tarjeta.destacada::before {
+      display: none;
+    }
+
+    /* Icono del servicio */
+    .servicio-icono {
+      width: 52px; height: 52px;
+      background: var(--azul-claro);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .servicio-titulo {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--negro-suave);
+      line-height: 1.3;
+    }
+
+    .servicio-texto {
+      font-family: 'Lora', serif;
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--gris-texto);
+      flex: 1;
+    }
+
+    .servicio-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--azul-principal);
+      text-decoration: none;
+      transition: gap var(--transicion);
+    }
+
+    .servicio-tarjeta.destacada .servicio-link {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .servicio-link:hover { gap: 0.7rem; }
+
+    /* =============================================
+       SECCIÓN ZONA DE COBERTURA
+    ============================================= */
+    #cobertura {
+      padding: 6rem 2rem;
+      background: var(--blanco);
+    }
+
+    .cobertura-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .cobertura-lista {
+      list-style: none;
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .cobertura-lista li {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.9rem;
+      color: var(--negro-suave);
+    }
+
+    .cobertura-lista li .icono-check {
+      width: 22px; height: 22px;
+      background: var(--azul-claro);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      color: var(--azul-principal);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* Mapa visual simplificado (placeholder hasta tener uno real) */
+    .mapa-placeholder {
+      background: var(--gris-claro);
+      border-radius: 20px;
+      height: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      border: 2px dashed var(--gris-medio);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Círculo de radio decorativo */
+    .mapa-circulo {
+      position: absolute;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      border: 2px dashed rgba(26,63,173,0.25);
+    }
+
+    .mapa-circulo.grande {
+      width: 380px; height: 380px;
+      border-color: rgba(26,63,173,0.1);
+    }
+
+    .mapa-punto {
+      position: relative;
+      z-index: 2;
+      width: 14px; height: 14px;
+      background: var(--azul-principal);
+      border-radius: 50%;
+      box-shadow: 0 0 0 6px rgba(26,63,173,0.2);
+    }
+
+    .mapa-etiqueta {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--azul-principal);
+      z-index: 2;
+    }
+
+    .mapa-radio-texto {
+      font-size: 0.7rem;
+      color: var(--gris-texto);
+      z-index: 2;
+    }
+
+    /* =============================================
+       SECCIÓN POR QUÉ ELEGIRNOS
+    ============================================= */
+    #ventajas {
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-principal) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #ventajas::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 80% 50%, rgba(255,255,255,0.04) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .ventajas-cabecera {
+      max-width: 1160px;
+      margin: 0 auto 3.5rem;
+      text-align: center;
+    }
+
+    .ventajas-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .ventaja-tarjeta {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      transition: background var(--transicion), transform var(--transicion);
+    }
+
+    .ventaja-tarjeta:hover {
+      background: rgba(255,255,255,0.14);
+      transform: translateY(-4px);
+    }
+
+    .ventaja-icono {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .ventaja-titulo {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--blanco);
+      margin-bottom: 0.6rem;
+    }
+
+    .ventaja-texto {
+      font-family: 'Lora', serif;
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* =============================================
+       SECCIÓN CONTACTO / CTA FINAL
+    ============================================= */
+    #contacto {
+      padding: 6rem 2rem;
+      background: var(--gris-claro);
+    }
+
+    .contacto-contenedor {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contacto-opciones {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+    }
+
+    .contacto-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      color: var(--gris-texto);
+    }
+
+    .contacto-item strong {
+      color: var(--negro-suave);
+      font-weight: 600;
+    }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: var(--negro-suave);
+      padding: 3rem 2rem 2rem;
+    }
+
+    .footer-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 1rem;
+    }
+
+    /*
+      LOGO FOOTER: Mismo logo que el nav.
+      Aquí sí necesitarás la versión en blanco o
+      con fondo transparente para que se vea bien.
+    */
+    .footer-logo-wrap img {
+      height: 38px;
+      width: auto;
+      filter: brightness(0) invert(1); /* Logo en blanco */
+    }
+
+    .footer-logo-nombre {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--blanco);
+    }
+
+    .footer-descripcion {
+      font-family: 'Lora', serif;
+      font-size: 0.82rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.5);
+      max-width: 300px;
+    }
+
+    .footer-titulo-col {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-lista {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-lista a, .footer-lista li {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color var(--transicion);
+    }
+
+    .footer-lista a:hover { color: var(--blanco); }
+
+    .footer-copy {
+      max-width: 1160px;
+      margin: 2rem auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy p {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* =============================================
+       BOTÓN FLOTANTE DE WHATSAPP
+       Siempre visible en la esquina inferior derecha.
+    ============================================= */
+    .wa-flotante {
+      position: fixed;
+      bottom: 1.8rem;
+      right: 1.8rem;
+      z-index: 300;
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+      text-decoration: none;
+      transition: transform var(--transicion), box-shadow var(--transicion);
+      animation: pulsoWa 3s ease infinite;
+    }
+
+    .wa-flotante:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 34px rgba(37,211,102,0.6);
+      animation: none;
+    }
+
+    .wa-flotante svg {
+      width: 30px; height: 30px;
+      fill: var(--blanco);
+    }
+
+    @keyframes pulsoWa {
+      0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.45); }
+      50% { box-shadow: 0 6px 34px rgba(37,211,102,0.65), 0 0 0 8px rgba(37,211,102,0.1); }
+    }
+
+    /* =============================================
+       SCROLL REVEAL
+       Clase base para animaciones al hacer scroll.
+    ============================================= */
+    .revelar {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .revelar.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Retardos en cascada */
+    .revelar[data-delay="1"] { transition-delay: 0.1s; }
+    .revelar[data-delay="2"] { transition-delay: 0.2s; }
+    .revelar[data-delay="3"] { transition-delay: 0.3s; }
+    .revelar[data-delay="4"] { transition-delay: 0.4s; }
+
+    /* =============================================
+       RESPONSIVE — TABLET (≤900px)
+    ============================================= */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburguesa { display: flex; }
+
+      .hero-contenedor {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-imagen-wrap { order: -1; max-width: 420px; margin: 0 auto; }
+      .hero-descripcion { margin: 0 auto 2.2rem; }
+      .hero-ctas { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-badge-flotante { display: none; }
+
+      .nosotros-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .nosotros-tarjeta-flotante { display: none; }
+
+      .servicios-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .servicio-tarjeta.destacada { grid-column: span 2; }
+
+      .cobertura-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .mapa-placeholder { height: 280px; }
+
+      .ventajas-grid { grid-template-columns: 1fr 1fr; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* =============================================
+       RESPONSIVE — MÓVIL (≤600px)
+    ============================================= */
+    @media (max-width: 600px) {
+      nav { padding: 0.9rem 1.2rem; }
+      .nav-cta span { display: none; }
+
+      #inicio { padding: 6rem 1.2rem 3rem; }
+
+      .contenedor { padding: 0 1.2rem; }
+
+      .servicios-grid { grid-template-columns: 1fr; }
+      .servicio-tarjeta.destacada { grid-column: span 1; }
+
+      .ventajas-grid { grid-template-columns: 1fr; }
+
+      .nosotros-propietarios { flex-direction: column; }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-copy {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .wa-flotante { bottom: 1.2rem; right: 1.2rem; width: 52px; height: 52px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =============================================
+       HEADER / NAVEGACIÓN
+  ============================================= -->
+  <header id="header">
+    <nav>
+      <!-- Logo -->
+      <a href="#inicio" class="nav-logo" aria-label="C&P Servicios de Higiene - Inicio">
+        <!--
+          LOGO: Cambia el src por la ruta real al archivo Logo.png
+          Si lo subes a la misma carpeta, usa: src="Logo.png"
+        -->
+        <img src="Logo.png" alt="Logo C&P Servicios de Higiene Zaragoza" />
+        <div class="nav-logo-texto">
+          <span class="nav-logo-nombre">C&amp;P Higiene</span>
+          <span class="nav-logo-sub">Zaragoza</span>
+        </div>
+      </a>
+
+      <!-- Links desktop -->
+      <ul class="nav-links" role="navigation" aria-label="Navegación principal">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#cobertura">Cobertura</a></li>
+        <li><a href="#ventajas">¿Por qué nosotros?</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <!-- CTA nav -->
+      <!--
+        WHATSAPP: Sustituye href="#" por tu enlace real.
+        Formato: https://wa.me/34XXXXXXXXX?text=Hola%2C+me+gustar%C3%ADa+pedir+un+presupuesto
+      -->
+      <a href="#" class="nav-cta" aria-label="Pedir presupuesto por WhatsApp">
+        <svg class="icono-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span>Presupuesto</span>
+      </a>
+
+      <!-- Botón hamburguesa (móvil) -->
+      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Menú móvil desplegable -->
+    <div class="nav-movil" id="nav-movil" role="navigation" aria-label="Menú móvil">
+      <a href="#nosotros" class="enlace-movil">Nosotros</a>
+      <a href="#servicios" class="enlace-movil">Servicios</a>
+      <a href="#cobertura" class="enlace-movil">Cobertura</a>
+      <a href="#ventajas" class="enlace-movil">¿Por qué nosotros?</a>
+      <a href="#contacto" class="enlace-movil">Contacto</a>
+      <!-- WHATSAPP: Mismo enlace que arriba -->
+      <a href="#">💬 Pedir presupuesto por WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- =============================================
+       HERO — SECCIÓN PRINCIPAL
+  ============================================= -->
+  <section id="inicio" aria-label="Inicio">
+    <div class="hero-contenedor">
+      <!-- Texto principal -->
+      <div class="hero-texto">
+        <div class="hero-badge">
+          <span class="punto" aria-hidden="true"></span>
+          Empresa familiar · Zaragoza
+        </div>
+
+        <h1 class="hero-titulo">
+          Limpieza profesional<br/>
+          en la que puedes<br/>
+          <span class="acento">confiar</span>
+        </h1>
+
+        <p class="hero-descripcion">
+          Somos C&amp;P Servicios de Higiene, una empresa familiar de Zaragoza
+          comprometida con la excelencia en cada trabajo. Cristales, oficinas,
+          comunidades, industria y más, siempre con rigor y puntualidad.
+        </p>
+
+        <div class="hero-ctas">
+          <!--
+            WHATSAPP: Sustituye href="#" por tu enlace real.
+          -->
+          <a href="#" class="btn-whatsapp principal" aria-label="Pedir presupuesto por WhatsApp">
+            <svg class="icono-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Pedir presupuesto gratis
+          </a>
+          <a href="#servicios" class="btn-whatsapp blanco">
+            Ver servicios
+          </a>
+        </div>
+
+        <!-- Estadísticas / prueba social -->
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num">5</div>
+            <div class="hero-stat-label">Servicios especializados</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">ZGZ</div>
+            <div class="hero-stat-label">Zaragoza y provincia</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">100%</div>
+            <div class="hero-stat-label">Comprometidos</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen del hero -->
+      <div class="hero-imagen-wrap">
+        <!--
+          IMAGEN HERO: Sustituye el src por tu imagen real.
+          Recomendamos una foto del equipo o de un trabajo en curso.
+          Ejemplo: src="imagenes/equipo-trabajo.jpg"
+          Por ahora muestra el logo como placeholder.
+        -->
+        <img
+          src="Logo___Eslogan.png"
+          alt="C&P Servicios de Higiene Zaragoza — equipo profesional de limpieza"
+          loading="eager"
+        />
+
+        <!-- Tarjeta flotante empresa familiar -->
+        <div class="hero-badge-flotante" aria-hidden="true">
+          <div class="icono-f">🏠</div>
+          <div>
+            <strong>Empresa familiar</strong>
+            <span>Trato cercano y personal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       FRANJA DE CONFIANZA
+  ============================================= -->
+  <div class="franja-confianza" aria-label="Garantías de servicio">
+    <div class="franja-interna">
+      <div class="franja-item">
+        <div class="check" aria-hidden="true">✓</div>
+        Presupuesto sin compromiso
+      </div>
+      <div class="franja-item">
+        <div class="check" aria-hidden="true">✓</div>
+        Empresa asegurada
+      </div>
+      <div class="franja-item">
+        <div class="check" aria-hidden="true">✓</div>
+        Personal cualificado
+      </div>
+      <div class="franja-item">
+        <div class="check" aria-hidden="true">✓</div>
+        Zaragoza y provincia
+      </div>
+      <div class="franja-item">
+        <div class="check" aria-hidden="true">✓</div>
+        Respuesta rápida
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================================
+       SECCIÓN NOSOTROS
+  ============================================= -->
+  <section id="nosotros" aria-labelledby="titulo-nosotros">
+    <div class="nosotros-grid">
+      <!-- Imagen del equipo -->
+      <div class="nosotros-imagen-wrap revelar">
+        <!--
+          IMAGEN NOSOTROS: Sustituye el src por una foto
+          de Miguel y Vanessa o de un trabajo realizado.
+          Ejemplo: src="imagenes/equipo-cp.jpg"
+        -->
+        <img
+          src="Logo.png"
+          alt="Miguel Fernando Cifuentes y Lady Vanessa Prado — fundadores de C&P Servicios de Higiene"
+          loading="lazy"
+        />
+        <!-- Tarjeta flotante -->
+        <div class="nosotros-tarjeta-flotante" aria-hidden="true">
+          <strong>100%</strong>
+          <span>Dedicación en cada servicio</span>
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div class="nosotros-texto">
+        <span class="etiqueta-seccion">Quiénes somos</span>
+        <h2 class="titulo-seccion revelar" id="titulo-nosotros">
+          Una empresa familiar con <span>valores reales</span>
+        </h2>
+        <div class="separador revelar" aria-hidden="true"></div>
+        <p class="subtitulo-seccion revelar">
+          C&amp;P Servicios de Higiene nace del compromiso de dos personas que
+          creen que la limpieza profesional va más allá de dejar las cosas brillantes:
+          se trata de generar confianza, cuidar los espacios ajenos como si fueran
+          propios y cumplir siempre con lo prometido.
+        </p>
+        <p class="subtitulo-seccion revelar" style="margin-top:1rem;">
+          Operamos en Zaragoza y su área metropolitana, ofreciendo un servicio
+          ágil, riguroso y adaptado a las necesidades reales de cada cliente,
+          ya sea una empresa, una comunidad de vecinos o un particular.
+        </p>
+
+        <!-- Propietarios -->
+        <div class="nosotros-propietarios revelar">
+          <div class="propietario">
+            <div class="propietario-avatar" aria-hidden="true">MF</div>
+            <div class="propietario-info">
+              <strong>Miguel Fernando Cifuentes</strong>
+              <span>Co-fundador</span>
+            </div>
+          </div>
+          <div class="propietario">
+            <div class="propietario-avatar" aria-hidden="true">LV</div>
+            <div class="propietario-info">
+              <strong>Lady Vanessa Prado</strong>
+              <span>Co-fundadora</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECCIÓN SERVICIOS
+  ============================================= -->
+  <section id="servicios" aria-labelledby="titulo-servicios">
+    <div class="servicios-cabecera">
+      <div>
+        <span class="etiqueta-seccion">Lo que hacemos</span>
+        <h2 class="titulo-seccion revelar" id="titulo-servicios">
+          Nuestros <span>servicios</span>
+        </h2>
+        <div class="separador revelar" aria-hidden="true"></div>
+        <p class="subtitulo-seccion revelar">
+          Cinco especialidades de limpieza profesional para cubrir
+          cualquier necesidad en Zaragoza y alrededores.
+        </p>
+      </div>
+      <!--
+        WHATSAPP: Sustituye href="#"
+      -->
+      <a href="#" class="btn-whatsapp secundario revelar" aria-label="Solicitar información sobre servicios por WhatsApp">
+        Solicitar información
+      </a>
+    </div>
+
+    <div class="servicios-grid">
+
+      <!-- Servicio 1: Limpieza de cristales -->
+      <article class="servicio-tarjeta revelar" data-delay="1">
+        <div class="servicio-icono" aria-hidden="true">🪟</div>
+        <h3 class="servicio-titulo">Limpieza de cristales</h3>
+        <p class="servicio-texto">
+          Eliminamos manchas, cal y suciedad de cualquier tipo de cristal,
+          tanto en altura como en zonas de difícil acceso. Resultado impecable
+          que mejora la imagen de tu negocio o edificio desde el primer momento.
+        </p>
+        <!-- WHATSAPP: Sustituye href="#" -->
+        <a href="#" class="servicio-link" aria-label="Pedir presupuesto para limpieza de cristales">
+          Pedir presupuesto →
+        </a>
+      </article>
+
+      <!-- Servicio 2: Limpieza de fin de obra -->
+      <article class="servicio-tarjeta revelar" data-delay="2">
+        <div class="servicio-icono" aria-hidden="true">🏗️</div>
+        <h3 class="servicio-titulo">Limpieza de fin de obra</h3>
+        <p class="servicio-texto">
+          Tras una reforma o construcción, los residuos son difíciles de retirar
+          sin el equipo adecuado. Nos encargamos de dejar el espacio listo para
+          su uso: sin polvo, sin escombros y con acabados perfectos.
+        </p>
+        <!-- WHATSAPP: Sustituye href="#" -->
+        <a href="#" class="servicio-link" aria-label="Pedir presupuesto para limpieza de fin de obra">
+          Pedir presupuesto →
+        </a>
+      </article>
+
+      <!-- Servicio 3: Limpieza de comunidades -->
+      <article class="servicio-tarjeta revelar" data-delay="3">
+        <div class="servicio-icono" aria-hidden="true">🏢</div>
+        <h3 class="servicio-titulo">Limpieza de comunidades</h3>
+        <p class="servicio-texto">
+          Portales, escaleras, ascensores y zonas comunes mantenidos en perfectas
+          condiciones. Ofrecemos contratos periódicos adaptados al tamaño de cada
+          comunidad, con total fiabilidad y discreción.
+        </p>
+        <!-- WHATSAPP: Sustituye href="#" -->
+        <a href="#" class="servicio-link" aria-label="Pedir presupuesto para limpieza de comunidades">
+          Pedir presupuesto →
+        </a>
+      </article>
+
+      <!-- Servicio 4: Limpieza de oficinas -->
+      <article class="servicio-tarjeta revelar" data-delay="1">
+        <div class="servicio-icono" aria-hidden="true">💼</div>
+        <h3 class="servicio-titulo">Limpieza de oficinas</h3>
+        <p class="servicio-texto">
+          Un entorno de trabajo limpio aumenta la productividad y transmite
+          profesionalidad a tus clientes. Realizamos el servicio en el horario
+          que mejor se adapte a tu empresa, sin interrumpir tu actividad.
+        </p>
+        <!-- WHATSAPP: Sustituye href="#" -->
+        <a href="#" class="servicio-link" aria-label="Pedir presupuesto para limpieza de oficinas">
+          Pedir presupuesto →
+        </a>
+      </article>
+
+      <!-- Servicio 5: Limpieza industrial (tarjeta destacada) -->
+      <article class="servicio-tarjeta destacada revelar" data-delay="2" aria-label="Servicio destacado">
+        <div class="servicio-icono" aria-hidden="true">🏭</div>
+        <h3 class="servicio-titulo">Limpieza industrial</h3>
+        <p class="servicio-texto">
+          Naves, almacenes, plantas de producción y espacios industriales
+          requieren un enfoque especializado. Utilizamos técnicas y productos
+          específicos para garantizar la higiene en entornos de alta exigencia,
+          cumpliendo con todas las normativas de seguridad vigentes.
+        </p>
+        <!-- WHATSAPP: Sustituye href="#" -->
+        <a href="#" class="servicio-link" aria-label="Pedir presupuesto para limpieza industrial">
+          Consultar disponibilidad →
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECCIÓN ZONA DE COBERTURA
+  ============================================= -->
+  <section id="cobertura" aria-labelledby="titulo-cobertura">
+    <div class="cobertura-grid contenedor">
+      <!-- Texto -->
+      <div>
+        <span class="etiqueta-seccion">Dónde trabajamos</span>
+        <h2 class="titulo-seccion revelar" id="titulo-cobertura">
+          Zaragoza y <span>toda la provincia</span>
+        </h2>
+        <div class="separador revelar" aria-hidden="true"></div>
+        <p class="subtitulo-seccion revelar">
+          Cubrimos toda la ciudad de Zaragoza y su área metropolitana,
+          así como cualquier municipio de la provincia. Si tienes dudas
+          sobre si cubrimos tu zona, consúltanos sin compromiso y lo valoramos.
+        </p>
+
+        <!-- Lista de zonas -->
+        <ul class="cobertura-lista revelar" aria-label="Municipios con cobertura">
+          <li><div class="icono-check" aria-hidden="true">✓</div> Zaragoza ciudad (todos los barrios)</li>
+          <li><div class="icono-check" aria-hidden="true">✓</div> Utebo, Casetas, Garrapinillos</li>
+          <li><div class="icono-check" aria-hidden="true">✓</div> Cuarte de Huerva, Cadrete, María de Huerva</li>
+          <li><div class="icono-check" aria-hidden="true">✓</div> La Puebla de Alfindén, Pastriz, El Burgo de Ebro</li>
+          <li><div class="icono-check" aria-hidden="true">✓</div> Zuera, Villamayor, Monzalbarba</li>
+          <li><div class="icono-check" aria-hidden="true">✓</div> ¿Tu municipio no aparece? <strong>Consúltanos</strong></li>
+        </ul>
+
+        <div style="margin-top:2rem;" class="revelar">
+          <!-- WHATSAPP: Sustituye href="#" -->
+          <a href="#" class="btn-whatsapp principal" aria-label="Preguntar por cobertura en mi zona por WhatsApp">
+            <svg class="icono-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            ¿Cubrís mi zona?
+          </a>
+        </div>
+      </div>
+
+      <!-- Mapa visual placeholder -->
+      <div class="mapa-placeholder revelar" role="img" aria-label="Mapa de cobertura de Zaragoza y provincia">
+        <div class="mapa-circulo grande" aria-hidden="true"></div>
+        <div class="mapa-circulo" aria-hidden="true"></div>
+        <div class="mapa-punto" aria-hidden="true"></div>
+        <p class="mapa-etiqueta">Zaragoza</p>
+        <p class="mapa-radio-texto">Zaragoza y provincia</p>
+        <!--
+          MAPA REAL: Puedes sustituir este placeholder por un
+          iframe de Google Maps con tu ubicación real.
+          Ejemplo:
+          <iframe
+            src="https://www.google.com/maps/embed?..."
+            width="100%" height="360" style="border:0;border-radius:20px;"
+            allowfullscreen loading="lazy">
+          </iframe>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECCIÓN VENTAJAS
+  ============================================= -->
+  <section id="ventajas" aria-labelledby="titulo-ventajas">
+    <div class="ventajas-cabecera">
+      <span class="etiqueta-seccion clara">¿Por qué elegirnos?</span>
+      <h2 class="titulo-seccion claro revelar" id="titulo-ventajas">
+        Lo que nos hace <span style="color:#7eb8ff;">diferentes</span>
+      </h2>
+      <p class="subtitulo-seccion claro revelar">
+        Más allá de la limpieza, ofrecemos compromiso, puntualidad y confianza
+        en cada trabajo que realizamos.
+      </p>
+    </div>
+
+    <div class="ventajas-grid">
+      <div class="ventaja-tarjeta revelar" data-delay="1">
+        <span class="ventaja-icono" aria-hidden="true">🤝</span>
+        <h3 class="ventaja-titulo">Trato personal</h3>
+        <p class="ventaja-texto">
+          Al ser una empresa familiar, cada cliente recibe atención directa
+          de los propietarios. Sin intermediarios, sin malentendidos.
+        </p>
+      </div>
+      <div class="ventaja-tarjeta revelar" data-delay="2">
+        <span class="ventaja-icono" aria-hidden="true">⏱️</span>
+        <h3 class="ventaja-titulo">Puntualidad garantizada</h3>
+        <p class="ventaja-texto">
+          Respetamos los horarios acordados porque entendemos que tu tiempo
+          y el de tu empresa son valiosos.
+        </p>
+      </div>
+      <div class="ventaja-tarjeta revelar" data-delay="3">
+        <span class="ventaja-icono" aria-hidden="true">✅</span>
+        <h3 class="ventaja-titulo">Presupuesto transparente</h3>
+        <p class="ventaja-texto">
+          Sin sorpresas en la factura. Te damos un precio claro y detallado
+          antes de comenzar cualquier trabajo.
+        </p>
+      </div>
+      <div class="ventaja-tarjeta revelar" data-delay="4">
+        <span class="ventaja-icono" aria-hidden="true">🔒</span>
+        <h3 class="ventaja-titulo">Discreción total</h3>
+        <p class="ventaja-texto">
+          Trabajamos en tu espacio con el máximo respeto y discreción,
+          siguiendo siempre protocolos de seguridad y confidencialidad.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECCIÓN CONTACTO / CTA FINAL
+  ============================================= -->
+  <section id="contacto" aria-labelledby="titulo-contacto">
+    <div class="contacto-contenedor">
+      <span class="etiqueta-seccion">Contacto</span>
+      <h2 class="titulo-seccion revelar" id="titulo-contacto">
+        ¿Listo para tener un espacio <span>impecable</span>?
+      </h2>
+      <div class="separador revelar" style="margin:1rem auto 1.5rem;" aria-hidden="true"></div>
+      <p class="subtitulo-seccion revelar" style="margin:0 auto 0.5rem;">
+        Escríbenos por WhatsApp y te respondemos lo antes posible con un
+        presupuesto personalizado, sin compromiso y sin costes ocultos.
+      </p>
+
+      <div class="contacto-opciones revelar">
+        <!--
+          WHATSAPP: Sustituye los tres href="#" siguientes
+          por tu enlace real de WhatsApp.
+        -->
+        <a href="#" class="btn-whatsapp principal" style="font-size:1rem; padding:1rem 2.2rem;" aria-label="Enviar mensaje por WhatsApp">
+          <svg class="icono-wa" viewBox="0 0 24 24" fill="currentColor" style="width:24px;height:24px;" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Escribir por WhatsApp
+        </a>
+      </div>
+
+      <!-- Info de contacto adicional -->
+      <div class="contacto-opciones revelar" style="margin-top:1.5rem;">
+        <div class="contacto-item">
+          <span aria-hidden="true">📍</span>
+          <span><strong>Zaragoza,</strong> España</span>
+        </div>
+        <div class="contacto-item">
+          <span aria-hidden="true">🕐</span>
+          <!--
+            HORARIO: Actualiza con tu horario real
+          -->
+          <span>Lun–Vie <strong>8:00–18:00</strong></span>
+        </div>
+        <div class="contacto-item">
+          <span aria-hidden="true">💬</span>
+          <span>Respuesta en <strong>&lt;2 horas</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer role="contentinfo">
+    <div class="footer-grid">
+
+      <!-- Columna 1: Marca -->
+      <div>
+        <div class="footer-logo-wrap">
+          <!--
+            LOGO FOOTER: Misma ruta que el logo del nav.
+            El filter CSS lo convierte en blanco.
+          -->
+          <img src="Logo.png" alt="C&P Servicios de Higiene Zaragoza" />
+          <span class="footer-logo-nombre">C&amp;P Higiene</span>
+        </div>
+        <p class="footer-descripcion">
+          Empresa familiar de limpieza profesional en Zaragoza.
+          Comprometidos con la excelencia, la puntualidad y la confianza
+          en cada servicio.
+        </p>
+      </div>
+
+      <!-- Columna 2: Servicios -->
+      <div>
+        <p class="footer-titulo-col">Servicios</p>
+        <ul class="footer-lista">
+          <li>Limpieza de cristales</li>
+          <li>Limpieza de fin de obra</li>
+          <li>Limpieza de comunidades</li>
+          <li>Limpieza de oficinas</li>
+          <li>Limpieza industrial</li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Contacto -->
+      <div>
+        <p class="footer-titulo-col">Contacto</p>
+        <ul class="footer-lista">
+          <!--
+            WHATSAPP / TELÉFONO: Sustituye href="#" y el texto
+            por tu número real cuando lo tengas.
+          -->
+          <li><a href="#">📱 WhatsApp (próximamente)</a></li>
+          <li>📍 Zaragoza, España</li>
+          <li>🌐 cyplimpiezas.com</li>
+          <!--
+            EMAIL: Añade tu email aquí cuando lo tengas.
+            Ejemplo: <li><a href="mailto:info@cyplimpiezas.com">✉️ info@cyplimpiezas.com</a></li>
+          -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copy">
+      <p>© 2025 C&amp;P Servicios de Higiene Zaragoza. Todos los derechos reservados.</p>
+      <p>Empresa familiar · Zaragoza · España</p>
+    </div>
+  </footer>
+
+  <!-- =============================================
+       BOTÓN FLOTANTE WHATSAPP
+       Siempre visible en esquina inferior derecha.
+       WHATSAPP: Sustituye href="#" por tu enlace real.
+  ============================================= -->
+  <a
+    href="#"
+    class="wa-flotante"
+    aria-label="Contactar por WhatsApp"
+    title="Escríbenos por WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- =============================================
+       JAVASCRIPT
+       - Scroll del header
+       - Menú móvil
+       - Animaciones al hacer scroll (IntersectionObserver)
+  ============================================= -->
+  <script>
+    // ─── Header: añadir fondo sólido al hacer scroll ───
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ─── Menú móvil: hamburguesa ───
+    const btnMenu   = document.getElementById('btn-menu');
+    const navMovil  = document.getElementById('nav-movil');
+    const enlaces   = document.querySelectorAll('.enlace-movil');
+
+    btnMenu.addEventListener('click', () => {
+      const abierto = navMovil.classList.toggle('abierto');
+      btnMenu.setAttribute('aria-expanded', abierto);
+    });
+
+    // Cerrar menú al pulsar un enlace interno
+    enlaces.forEach(enlace => {
+      enlace.addEventListener('click', () => {
+        navMovil.classList.remove('abierto');
+        btnMenu.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ─── Scroll reveal con IntersectionObserver ───
+    // Anima los elementos con clase "revelar" cuando entran en viewport
+    const observador = new IntersectionObserver((entradas) => {
+      entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('visible');
+          // Deja de observar una vez animado (mejora rendimiento)
+          observador.unobserve(entrada.target);
+        }
+      });
+    }, {
+      threshold: 0.12,    // Se activa cuando el 12% del elemento es visible
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    // Observar todos los elementos con clase "revelar"
+    document.querySelectorAll('.revelar').forEach(el => observador.observe(el));
+
+    // ─── Smooth scroll para enlaces internos ───
+    document.querySelectorAll('a[href^="#"]').forEach(enlace => {
+      enlace.addEventListener('click', (e) => {
+        const destino = document.querySelector(enlace.getAttribute('href'));
+        if (destino) {
+          e.preventDefault();
+          destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
