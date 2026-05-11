@@ -22,7 +22,7 @@
   <meta property="og:description"
     content="Empresa familiar de limpieza profesional en Zaragoza. Pide tu presupuesto sin compromiso." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.cyphigiene.es" />
+  <meta property="og:url" content="https://www.cyplimpiezas.com" />
 
   <!-- Google Fonts -->
   <link
@@ -278,13 +278,8 @@
     .nav-logo-nombre {
       font-size: 0.9rem;
       font-weight: 800;
-      color: var(--blanco);
-      letter-spacing: 0.02em;
-      transition: color 0.3s;
-    }
-
-    header.scrolled .nav-logo-nombre {
       color: var(--azul-oscuro);
+      letter-spacing: 0.02em;
     }
 
     .nav-logo-sub {
@@ -356,13 +351,9 @@
       display: block;
       width: 24px;
       height: 2px;
-      background: var(--blanco);
-      border-radius: 2px;
-      transition: transform 0.3s, opacity 0.3s, background 0.3s;
-    }
-
-    header.scrolled .hamburguesa span {
       background: var(--negro-suave);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
     }
 
     /* Menú móvil abierto */
@@ -1434,7 +1425,11 @@
     <nav>
       <!-- Logo -->
       <a href="#inicio" class="nav-logo" aria-label="C&P Servicios de Higiene - Inicio">
-        
+        <!--
+          LOGO: Cambia el src por la ruta real al archivo Logo.png
+          Si lo subes a la misma carpeta, usa: src="Logo.png"
+        -->
+        <img src="Logo.png" alt="Logo C&P Servicios de Higiene Zaragoza" />
         <div class="nav-logo-texto">
           <span class="nav-logo-nombre">C&amp;P Higiene</span>
           <span class="nav-logo-sub">Zaragoza</span>
