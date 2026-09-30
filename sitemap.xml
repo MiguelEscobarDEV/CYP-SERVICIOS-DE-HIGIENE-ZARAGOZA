@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cyphigiene.es/</loc>
+    <!-- Actualizar esta fecha (AAAA-MM-DD) cada vez que se cambie
+         el contenido de la pagina: es la unica senal del sitemap
+         que Google tiene en cuenta de verdad. -->
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
