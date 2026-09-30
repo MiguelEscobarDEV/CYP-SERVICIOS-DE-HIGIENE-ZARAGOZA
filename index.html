@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <!-- Sin maximum-scale: el usuario debe poder ampliar con los dedos (accesibilidad) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a3fad" />
   <!-- Favicon y iconos -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -21,19 +23,108 @@
   <meta name="keywords"
     content="limpieza Zaragoza, empresa limpieza Zaragoza, limpieza cristales, limpieza fin de obra, limpieza comunidades, limpieza oficinas, limpieza industrial" />
   <meta name="author" content="C&P Servicios de Higiene Zaragoza" />
+  <meta name="robots" content="index, follow" />
+  <!--
+    DOMINIO CANONICO: se ha unificado en https://cyphigiene.es/ (sin www),
+    que es el que ya usaban sitemap.xml y el pie de pagina.
+    Si el dominio definitivo lleva "www.", hay que cambiarlo aqui,
+    en og:url, en og:image y en sitemap.xml a la vez.
+  -->
+  <link rel="canonical" href="https://cyphigiene.es/" />
 
-  <!-- Open Graph (para compartir en redes sociales) -->
+  <!-- Open Graph (para compartir en redes sociales y WhatsApp) -->
   <meta property="og:title" content="C&P Servicios de Higiene Zaragoza" />
   <meta property="og:description"
     content="Empresa familiar de limpieza profesional en Zaragoza. Pide tu presupuesto sin compromiso." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.cyphigiene.es" />
-  <meta property="og:image" content="android-chrome-512x512.png">
+  <meta property="og:url" content="https://cyphigiene.es/" />
+  <meta property="og:site_name" content="C&P Servicios de Higiene Zaragoza" />
+  <meta property="og:locale" content="es_ES" />
+  <!-- og:image DEBE ser una URL absoluta o no se muestra al compartir -->
+  <meta property="og:image" content="https://cyphigiene.es/Foto_Oficina-1536.webp" />
+  <meta property="og:image:width" content="1536" />
+  <meta property="og:image:height" content="1024" />
+  <meta property="og:image:alt" content="Operario de C&P Servicios de Higiene limpiando una oficina en Zaragoza" />
 
-  <!-- Google Fonts -->
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="C&P Servicios de Higiene Zaragoza" />
+  <meta name="twitter:description"
+    content="Empresa familiar de limpieza profesional en Zaragoza. Pide tu presupuesto sin compromiso." />
+  <meta name="twitter:image" content="https://cyphigiene.es/Foto_Oficina-1536.webp" />
+
+  <!-- Google Fonts (preconnect acelera la descarga de las tipografias) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
     rel="stylesheet" />
+
+  <!-- =============================================
+       DATOS ESTRUCTURADOS (JSON-LD)
+       Ficha legible por Google y asistentes de IA.
+       Solo contiene datos VERIFICADOS de la web.
+       DIRECCION: por decision de los propietarios NO se publica
+       la calle ni la ubicacion exacta, solo el codigo postal y la
+       ciudad. Es lo habitual en empresas que trabajan a domicilio.
+       NOTA sobre sameAs: el enlace de Google es el corto
+       (share.google). Si conseguis la URL larga de vuestra
+       ficha en Google Maps, es preferible ponerla aqui.
+       NO anadir "aggregateRating" sin resenas reales:
+       Google lo considera marcado enganoso y penaliza.
+  ============================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://cyphigiene.es/#empresa",
+    "name": "C&P Servicios de Higiene Zaragoza",
+    "description": "Empresa familiar de limpieza profesional en Zaragoza y alrededores: cristales, fin de obra, comunidades, oficinas e industria.",
+    "url": "https://cyphigiene.es/",
+    "telephone": "+34745013565",
+    "email": "info@cyphigiene.es",
+    "sameAs": [
+      "https://www.instagram.com/cypserviciosdehigiene",
+      "https://share.google/l5hsdTflEOpdUA5SZ"
+    ],
+    "image": "https://cyphigiene.es/Foto_Oficina-1536.webp",
+    "logo": "https://cyphigiene.es/android-chrome-512x512.png",
+    "priceRange": "$$",
+    "currenciesAccepted": "EUR",
+    "address": {
+      "@type": "PostalAddress",
+      "postalCode": "50002",
+      "addressLocality": "Zaragoza",
+      "addressRegion": "Aragón",
+      "addressCountry": "ES"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Zaragoza" },
+      { "@type": "AdministrativeArea", "name": "Aragón" }
+    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    }],
+    "founder": [
+      { "@type": "Person", "name": "Miguel Fernando Cifuentes" },
+      { "@type": "Person", "name": "Lady Vanessa Prado" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de limpieza",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de cristales" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de fin de obra" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de comunidades" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de oficinas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza industrial" } }
+      ]
+    }
+  }
+  </script>
 
   <style>
     /* =============================================
@@ -54,7 +145,9 @@
       --blanco: #ffffff;
       --gris-claro: #f4f6fb;
       --gris-medio: #e2e7f5;
-      --gris-texto: #6b7494;
+      --gris-texto: #676f8d;
+      /* Oscurecido levemente: ahora cumple contraste AA (4.5:1) tambien
+         sobre el fondo gris claro de la seccion de servicios */
       --negro-suave: #111827;
       --whatsapp: #25d366;
       /* Verde WhatsApp oficial */
@@ -265,18 +358,6 @@
       flex-shrink: 0;
     }
 
-    /*
-      LOGO: Sustituye el src por la ruta real a tu logo.
-      El archivo Logo.png tiene fondo negro. Cuando lo
-      pongas en producción, exporta una versión con fondo
-      transparente para que quede mejor.
-    */
-    .nav-logo img {
-      height: 42px;
-      width: auto;
-      /* filter: brightness(0) invert(1); — activa esto si el fondo es claro y el logo es oscuro */
-    }
-
     .nav-logo-texto {
       display: flex;
       flex-direction: column;
@@ -295,11 +376,17 @@
       color: var(--azul-oscuro);
     }
 
+    /* Sobre el hero azul va en blanco; al hacer scroll pasa a gris */
     .nav-logo-sub {
       font-size: 0.62rem;
       font-weight: 400;
-      color: var(--gris-texto);
+      color: rgba(255, 255, 255, 0.7);
       letter-spacing: 0.08em;
+      transition: color var(--transicion);
+    }
+
+    header.scrolled .nav-logo-sub {
+      color: var(--gris-texto);
     }
 
     /* ── Links de navegación ── */
@@ -309,19 +396,38 @@
       list-style: none;
     }
 
+    /*
+      Mientras el header es transparente esta sobre el hero azul oscuro,
+      asi que los enlaces van en blanco. Al hacer scroll el header se vuelve
+      blanco y entonces pasan a texto oscuro.
+    */
     .nav-links a {
       font-size: 0.78rem;
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--negro-suave);
+      color: var(--blanco);
       text-decoration: none;
-      opacity: 0.7;
+      opacity: 0.85;
       transition: opacity var(--transicion), color var(--transicion);
       white-space: nowrap;
+      /* Amplia el area pulsable sin mover nada de sitio */
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
     }
 
     .nav-links a:hover {
+      opacity: 1;
+      color: var(--blanco);
+    }
+
+    header.scrolled .nav-links a {
+      color: var(--negro-suave);
+      opacity: 0.75;
+    }
+
+    header.scrolled .nav-links a:hover {
       opacity: 1;
       color: var(--azul-principal);
     }
@@ -353,9 +459,14 @@
     .hamburguesa {
       display: none;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       gap: 5px;
       background: none;
       border: none;
+      /* 44x44 minimo: area de pulsacion comoda en movil */
+      min-width: 44px;
+      min-height: 44px;
       padding: 4px;
       cursor: pointer;
     }
@@ -371,6 +482,19 @@
 
     header.scrolled .hamburguesa span {
       background: var(--negro-suave);
+    }
+
+    /* Las tres barras se convierten en una X cuando el menu esta abierto */
+    .hamburguesa.abierto span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburguesa.abierto span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburguesa.abierto span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
     }
 
     /* Menú móvil abierto */
@@ -457,8 +581,6 @@
       z-index: 2;
       width: 100%;
     }
-
-    .hero-texto {}
 
     .hero-badge {
       display: inline-flex;
@@ -548,6 +670,9 @@
     */
     .hero-imagen-wrap img {
       width: 100%;
+      /* height:auto es imprescindible: sin el, los atributos width/height
+         del <img> fijan la altura y anulan el aspect-ratio de abajo */
+      height: auto;
       border-radius: 20px;
       box-shadow: var(--sombra-fuerte);
       display: block;
@@ -615,7 +740,8 @@
     .hero-stat-label {
       font-size: 0.7rem;
       font-weight: 400;
-      color: rgba(255, 255, 255, 0.6);
+      /* 0.6 daba 4.23:1 (insuficiente). 0.75 da 5.73:1 */
+      color: rgba(255, 255, 255, 0.75);
       margin-top: 0.3rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -716,6 +842,7 @@
 
     .nosotros-imagen-wrap img {
       width: 100%;
+      height: auto;
       border-radius: 20px;
       box-shadow: var(--sombra-fuerte);
       display: block;
@@ -749,8 +876,6 @@
       opacity: 0.85;
       line-height: 1.4;
     }
-
-    .nosotros-texto {}
 
     .nosotros-propietarios {
       display: flex;
@@ -922,6 +1047,9 @@
     .servicio-link {
       display: inline-flex;
       align-items: center;
+      /* Area de pulsacion de 44px (antes 16px, demasiado pequena en movil) */
+      min-height: 44px;
+      align-self: flex-start;
       gap: 0.4rem;
       font-size: 0.78rem;
       font-weight: 700;
@@ -1165,18 +1293,6 @@
       margin-bottom: 1rem;
     }
 
-    /*
-      LOGO FOOTER: Mismo logo que el nav.
-      Aquí sí necesitarás la versión en blanco o
-      con fondo transparente para que se vea bien.
-    */
-    .footer-logo-wrap img {
-      height: 38px;
-      width: auto;
-      filter: brightness(0) invert(1);
-      /* Logo en blanco */
-    }
-
     .footer-logo-nombre {
       font-size: 0.88rem;
       font-weight: 700;
@@ -1196,7 +1312,8 @@
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.4);
+      /* 0.4 daba 3.79:1 (insuficiente). 0.6 da 7.02:1 */
+      color: rgba(255, 255, 255, 0.6);
       margin-bottom: 1.2rem;
     }
 
@@ -1215,6 +1332,13 @@
       transition: color var(--transicion);
     }
 
+    /* Los enlaces del pie necesitan area de pulsacion comoda en movil */
+    .footer-lista a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+    }
+
     .footer-lista a:hover {
       color: var(--blanco);
     }
@@ -1231,7 +1355,8 @@
 
     .footer-copy p {
       font-size: 0.72rem;
-      color: rgba(255, 255, 255, 0.35);
+      /* 0.35 daba 3.22:1 (insuficiente). 0.55 da 6.06:1 */
+      color: rgba(255, 255, 255, 0.55);
     }
 
     /* =============================================
@@ -1386,15 +1511,15 @@
         text-align: center;
       }
 
+      /*
+        Antes habia aqui un "text-align: justify" que en pantallas estrechas
+        abria huecos enormes entre palabras (efecto "rios" de espacio blanco).
+        Se ha quitado: centrado queda mucho mas limpio en movil.
+        Apuntaba ademas a dos clases que no existen en este HTML.
+      */
       .nosotros-texto p,
-      .servicios-cabecera p,
-      .propuestas-tarjeta p,
-      /* Por si tienes tarjetas de texto */
-      .seccion-principal p {
-        /* Cambia esto por las clases de tus párrafos si usas otras */
-        text-align: justify;
-        text-justify: inter-word;
-        /* Hace que el espaciado entre palabras sea más limpio */
+      .servicios-cabecera p {
+        text-align: center;
       }
 
       .nosotros-tarjeta-flotante {
@@ -1439,6 +1564,13 @@
         display: none;
       }
 
+      /* Solo queda el icono: se asegura un area de pulsacion de 44px */
+      .nav-cta {
+        min-width: 44px;
+        min-height: 44px;
+        justify-content: center;
+      }
+
       #inicio {
         padding: 6rem 1.2rem 3rem;
       }
@@ -1480,7 +1612,57 @@
         height: 52px;
       }
     }
+
+    /* =============================================
+       MOVIMIENTO REDUCIDO
+       Si el usuario ha pedido en su sistema operativo
+       que se reduzcan las animaciones (ajuste de
+       accesibilidad, habitual en personas sensibles al
+       mareo), se desactivan todas y se muestra el
+       contenido directamente, sin animacion de entrada.
+    ============================================= */
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .revelar,
+      .hero-badge,
+      .hero-titulo,
+      .hero-descripcion,
+      .hero-ctas,
+      .hero-stats,
+      .hero-imagen-wrap {
+        opacity: 1;
+        transform: none;
+      }
+    }
   </style>
+
+  <!--
+    SIN JAVASCRIPT: los elementos con clase "revelar" nacen
+    invisibles y es el JS quien los muestra al hacer scroll.
+    Si el JS no se ejecuta (desactivado o error), sin esto
+    quedarian invisibles para siempre. Este bloque los fuerza
+    a mostrarse.
+  -->
+  <noscript>
+    <style>
+      .revelar {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
 </head>
 
 <body>
@@ -1489,7 +1671,7 @@
        HEADER / NAVEGACIÓN
   ============================================= -->
   <header id="header">
-    <nav>
+    <nav aria-label="Navegación principal">
       <!-- Logo -->
       <a href="#inicio" class="nav-logo" aria-label="C&P Servicios de Higiene - Inicio">
 
@@ -1500,7 +1682,7 @@
       </a>
 
       <!-- Links desktop -->
-      <ul class="nav-links" role="navigation" aria-label="Navegación principal">
+      <ul class="nav-links">
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#cobertura">Cobertura</a></li>
@@ -1513,7 +1695,7 @@
         WHATSAPP: Sustituye href="#" por tu enlace real.
         Formato: https://wa.me/34XXXXXXXXX?text=Hola%2C+me+gustar%C3%ADa+pedir+un+presupuesto
       -->
-      <a href="https://wa.me/34745013565" class="nav-cta" aria-label="Pedir presupuesto por WhatsApp" target="_blank">
+      <a href="https://wa.me/34745013565?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto%20sin%20compromiso." class="nav-cta" aria-label="Pedir presupuesto por WhatsApp" target="_blank" rel="noopener noreferrer">
         <svg class="icono-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path
             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -1537,7 +1719,7 @@
       <a href="#ventajas" class="enlace-movil">¿Por qué nosotros?</a>
       <a href="#contacto" class="enlace-movil">Contacto</a>
       <!-- WHATSAPP: Mismo enlace que arriba -->
-      <a href="https://wa.me/34745013565" target="_blank">💬 Pedir presupuesto por WhatsApp</a>
+      <a href="https://wa.me/34745013565?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto%20sin%20compromiso." target="_blank" rel="noopener noreferrer">💬 Pedir presupuesto por WhatsApp</a>
     </div>
   </header>
 
@@ -1569,7 +1751,7 @@
           <!--
             WHATSAPP: Sustituye href="#" por tu enlace real.
           -->
-          <a href="https://wa.me/34745013565" target="_blank" class="btn-whatsapp principal"
+          <a href="https://wa.me/34745013565?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto%20sin%20compromiso." target="_blank" rel="noopener noreferrer" class="btn-whatsapp principal"
             aria-label="Pedir presupuesto por WhatsApp">
             <svg class="icono-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path
@@ -1602,13 +1784,15 @@
       <!-- Imagen del hero -->
       <div class="hero-imagen-wrap">
         <!--
-          IMAGEN HERO: Sustituye el src por tu imagen real.
-          Recomendamos una foto del equipo o de un trabajo en curso.
-          Ejemplo: src="imagenes/equipo-trabajo.jpg"
-          Por ahora muestra el logo como placeholder.
+          IMAGEN HERO en WebP y dos tamanos: el navegador elige
+          el de 768px en movil y el de 1536px en pantallas grandes.
+          El PNG original se conserva en la carpeta por si hace falta.
         -->
-        <img src="Fondo_Eslogan.png" alt="C&P Servicios de Higiene Zaragoza — equipo profesional de limpieza"
-          loading="eager" />
+        <img src="Foto_Oficina-1536.webp"
+          srcset="Foto_Oficina-768.webp 768w, Foto_Oficina-1536.webp 1536w"
+          sizes="(max-width: 900px) min(92vw, 420px), 548px" width="1536" height="1024"
+          alt="Operario de C&amp;P Servicios de Higiene limpiando una mesa de oficina en Zaragoza"
+          loading="eager" fetchpriority="high" decoding="async" />
 
         <!-- Tarjeta flotante empresa familiar -->
         <div class="hero-badge-flotante" aria-hidden="true">
@@ -1625,7 +1809,7 @@
   <!-- =============================================
        FRANJA DE CONFIANZA
   ============================================= -->
-  <div class="franja-confianza" aria-label="Garantías de servicio">
+  <div class="franja-confianza" role="group" aria-label="Garantías de servicio">
     <div class="franja-interna">
       <div class="franja-item">
         <div class="check" aria-hidden="true">✓</div>
@@ -1658,13 +1842,16 @@
       <!-- Imagen del equipo -->
       <div class="nosotros-imagen-wrap revelar">
         <!--
-          IMAGEN NOSOTROS: Sustituye el src por una foto
-          de Miguel y Vanessa o de un trabajo realizado.
-          Ejemplo: src="imagenes/equipo-cp.jpg"
+          IMAGEN NOSOTROS. El texto alternativo describe lo que
+          REALMENTE se ve en la foto (limpieza de cristales).
+          Si mas adelante volveis a poner la foto de los fundadores,
+          hay que cambiar tambien este alt.
         -->
-        <img src="Foto.PNG"
-          alt="Miguel Fernando Cifuentes y Lady Vanessa Prado — fundadores de C&P Servicios de Higiene"
-          loading="lazy" />
+        <img src="Foto_Cristales-1536.webp"
+          srcset="Foto_Cristales-768.webp 768w, Foto_Cristales-1536.webp 1536w"
+          sizes="(max-width: 900px) calc(100vw - 4rem), 540px" width="1536" height="1024"
+          alt="Operaria de C&amp;P Servicios de Higiene limpiando los cristales de una oficina en Zaragoza, con la Basílica del Pilar al fondo"
+          loading="lazy" decoding="async" />
         <!-- Tarjeta flotante -->
         <div class="nosotros-tarjeta-flotante" aria-hidden="true">
           <strong>100%</strong>
@@ -1731,7 +1918,7 @@
       <!--
         WHATSAPP: Sustituye href="#"
       -->
-      <a href="https://wa.me/34745013565" target="_blank" class="btn-whatsapp secundario revelar"
+      <a href="https://wa.me/34745013565?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20vuestros%20servicios." target="_blank" rel="noopener noreferrer" class="btn-whatsapp secundario revelar"
         aria-label="Solicitar información sobre servicios por WhatsApp">
         Solicitar información
       </a>
@@ -1749,7 +1936,7 @@
           que mejora la imagen de tu negocio o edificio desde el primer momento.
         </p>
         <!-- WHATSAPP: Sustituye href="#" -->
-        <a href="https://wa.me/34745013565" target="_blank" class="servicio-link"
+        <a href="https://wa.me/34745013565?text=Hola%2C%20me%20gustar%C3%ADa%20un%20presupuesto%20para%20limpieza%20de%20cristales." target="_blank" rel="noopener noreferrer" class="servicio-link"
           aria-label="Pedir presupuesto para limpieza de cristales">
           Pedir presupuesto →
         </a>
@@ -1765,7 +1952,7 @@
           su uso: sin polvo, sin escombros y con acabados perfectos.
         </p>
         <!-- WHATSAPP: Sustituye href="#" -->
-        <a href="https://wa.me/34745013565" target="_blank" class="servicio-link"
+        <a href="https://wa.me/34745013565?text=Hola%2C%20me%20gustar%C3%ADa%20un%20presupuesto%20para%20limpieza%20de%20fin%20de%20obra." target="_blank" rel="noopener noreferrer" class="servicio-link"
           aria-label="Pedir presupuesto para limpieza de fin de obra">
           Pedir presupuesto →
         </a>
@@ -1781,7 +1968,7 @@
           comunidad, con total fiabilidad y discreción.
         </p>
         <!-- WHATSAPP: Sustituye href="#" -->
-        <a href="https://wa.me/34745013565" target="_blank" class="servicio-link"
+        <a href="https://wa.me/34745013565?text=Hola%2C%20me%20gustar%C3%ADa%20un%20presupuesto%20para%20limpieza%20de%20comunidades." target="_blank" rel="noopener noreferrer" class="servicio-link"
           aria-label="Pedir presupuesto para limpieza de comunidades">
           Pedir presupuesto →
         </a>
@@ -1797,7 +1984,7 @@
           que mejor se adapte a tu empresa, sin interrumpir tu actividad.
         </p>
         <!-- WHATSAPP: Sustituye href="#" -->
-        <a href="https://wa.me/34745013565" target="_blank" class="servicio-link"
+        <a href="https://wa.me/34745013565?text=Hola%2C%20me%20gustar%C3%ADa%20un%20presupuesto%20para%20limpieza%20de%20oficinas." target="_blank" rel="noopener noreferrer" class="servicio-link"
           aria-label="Pedir presupuesto para limpieza de oficinas">
           Pedir presupuesto →
         </a>
@@ -1814,7 +2001,7 @@
           cumpliendo con todas las normativas de seguridad vigentes.
         </p>
         <!-- WHATSAPP: Sustituye href="#" -->
-        <a href="https://wa.me/34745013565" target="_blank" class="servicio-link"
+        <a href="https://wa.me/34745013565?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20para%20limpieza%20industrial." target="_blank" rel="noopener noreferrer" class="servicio-link"
           aria-label="Pedir presupuesto para limpieza industrial">
           Consultar disponibilidad →
         </a>
@@ -1832,12 +2019,12 @@
       <div>
         <span class="etiqueta-seccion">Dónde trabajamos</span>
         <h2 class="titulo-seccion revelar" id="titulo-cobertura">
-          Zaragoza y <span>toda Aragón</span>
+          Zaragoza y <span>todo Aragón</span>
         </h2>
         <div class="separador revelar" aria-hidden="true"></div>
         <p class="subtitulo-seccion revelar">
           Cubrimos toda la ciudad de Zaragoza y su área metropolitana,
-          llegando a municipios a mas de 150 kilómetros. Si tienes dudas
+          llegando a municipios a más de 150 kilómetros. Si tienes dudas
           sobre si cubrimos tu zona, escríbenos sin compromiso.
         </p>
 
@@ -1865,7 +2052,7 @@
 
         <div style="margin-top:2rem;" class="revelar">
           <!-- WHATSAPP: Sustituye href="#" -->
-          <a href="https://wa.me/34745013565" target="_blank" class="btn-whatsapp principal"
+          <a href="https://wa.me/34745013565?text=Hola%2C%20quer%C3%ADa%20saber%20si%20cubr%C3%ADs%20mi%20zona.%20Estoy%20en%3A%20" target="_blank" rel="noopener noreferrer" class="btn-whatsapp principal"
             aria-label="Preguntar por cobertura en mi zona por WhatsApp">
             <svg class="icono-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path
@@ -1968,7 +2155,7 @@
           WHATSAPP: Sustituye los tres href="#" siguientes
           por tu enlace real de WhatsApp.
         -->
-        <a href="https://wa.me/34745013565" target="_blank" class="btn-whatsapp principal"
+        <a href="https://wa.me/34745013565?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto%20sin%20compromiso." target="_blank" rel="noopener noreferrer" class="btn-whatsapp principal"
           style="font-size:1rem; padding:1rem 2.2rem;" aria-label="Enviar mensaje por WhatsApp">
           <svg class="icono-wa" viewBox="0 0 24 24" fill="currentColor" style="width:24px;height:24px;"
             aria-hidden="true">
@@ -1990,7 +2177,7 @@
           <!--
             HORARIO: Actualiza con tu horario real
           -->
-          <span>Lun–Sab <strong>8:00–17:00</strong></span>
+          <span>Lun–Sáb <strong>8:00–17:00</strong></span>
         </div>
         <div class="contacto-item">
           <span aria-hidden="true">💬</span>
@@ -2039,17 +2226,19 @@
       <div>
         <p class="footer-titulo-col">Contacto</p>
         <ul class="footer-lista">
+          <li><a href="https://wa.me/34745013565?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto%20sin%20compromiso."
+              target="_blank" rel="noopener noreferrer">📱 WhatsApp</a></li>
+          <li><a href="mailto:info@cyphigiene.es">✉️ info@cyphigiene.es</a></li>
           <!--
-            WHATSAPP / TELÉFONO: Sustituye href="#" y el texto
-            por tu número real cuando lo tengas.
+            Ficha de Google: refuerza el SEO local y lleva a las resenas.
+            Si conseguis la URL larga de Google Maps, sustituidla aqui
+            y tambien en el bloque JSON-LD de la cabecera.
           -->
-          <li><a href="https://wa.me/34745013565" target="_blank">📱 WhatsApp</a></li>
+          <li><a href="https://share.google/l5hsdTflEOpdUA5SZ" target="_blank" rel="noopener noreferrer">⭐ Ver
+              nuestra ficha en Google</a></li>
+          <li><a href="https://www.instagram.com/cypserviciosdehigiene" target="_blank"
+              rel="noopener noreferrer">📷 Instagram</a></li>
           <li>📍 Zaragoza, España</li>
-          <li>🌐 cyphigiene.es</li>
-          <!--
-            EMAIL: Añade tu email aquí cuando lo tengas.
-            Ejemplo: <li><a href="mailto:info@cyplimpiezas.com">✉️ info@cyplimpiezas.com</a></li>
-          -->
         </ul>
       </div>
     </div>
@@ -2066,7 +2255,7 @@
        Siempre visible en esquina inferior derecha.
        WHATSAPP: Sustituye href="#" por tu enlace real.
   ============================================= -->
-  <a href="https://wa.me/34745013565" target="_blank" class="wa-flotante" aria-label="Contactar por WhatsApp"
+  <a href="https://wa.me/34745013565?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20un%20presupuesto%20sin%20compromiso." target="_blank" rel="noopener noreferrer" class="wa-flotante" aria-label="Contactar por WhatsApp"
     title="Escríbenos por WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
@@ -2092,17 +2281,46 @@
     const navMovil = document.getElementById('nav-movil');
     const enlaces = document.querySelectorAll('.enlace-movil');
 
-    btnMenu.addEventListener('click', () => {
-      const abierto = navMovil.classList.toggle('abierto');
-      btnMenu.setAttribute('aria-expanded', abierto);
+    // Una sola función para abrir/cerrar, así el botón, el aria
+    // y la animación de la X no se pueden desincronizar nunca
+    const ponerMenu = (abierto) => {
+      navMovil.classList.toggle('abierto', abierto);
+      btnMenu.classList.toggle('abierto', abierto);
+      btnMenu.setAttribute('aria-expanded', String(abierto));
+    };
+
+    btnMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+      ponerMenu(!navMovil.classList.contains('abierto'));
     });
 
     // Cerrar menú al pulsar un enlace interno
     enlaces.forEach(enlace => {
-      enlace.addEventListener('click', () => {
-        navMovil.classList.remove('abierto');
-        btnMenu.setAttribute('aria-expanded', 'false');
-      });
+      enlace.addEventListener('click', () => ponerMenu(false));
+    });
+
+    // Cerrar con la tecla Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMovil.classList.contains('abierto')) {
+        ponerMenu(false);
+        btnMenu.focus();
+      }
+    });
+
+    // Cerrar al pulsar fuera del menú
+    document.addEventListener('click', (e) => {
+      if (navMovil.classList.contains('abierto') &&
+        !navMovil.contains(e.target) && !btnMenu.contains(e.target)) {
+        ponerMenu(false);
+      }
+    });
+
+    // Si se agranda la ventana hasta el diseño de escritorio,
+    // el menú móvil debe quedar cerrado
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900 && navMovil.classList.contains('abierto')) {
+        ponerMenu(false);
+      }
     });
 
     // ─── Scroll reveal con IntersectionObserver ───
