@@ -108,10 +108,7 @@
       "opens": "08:00",
       "closes": "17:00"
     }],
-    "founder": [
-      { "@type": "Person", "name": "Miguel Fernando Cifuentes" },
-      { "@type": "Person", "name": "Lady Vanessa Prado" }
-    ],
+    "founder": { "@type": "Person", "name": "Lady Vanessa Prado" },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Servicios de limpieza",
@@ -832,8 +829,7 @@
     }
 
     /*
-      IMAGEN NOSOTROS: Sustituye el src por una foto del
-      equipo (Miguel y Vanessa) o de un trabajo realizado.
+      IMAGEN NOSOTROS: foto del equipo o de un trabajo realizado.
       Dimensiones recomendadas: 560x460px aprox.
     */
     .nosotros-imagen-wrap {
@@ -879,6 +875,7 @@
 
     .nosotros-propietarios {
       display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
       margin-top: 2rem;
     }
@@ -890,7 +887,11 @@
       background: var(--gris-claro);
       border-radius: var(--radio);
       padding: 0.75rem 1rem;
-      flex: 1;
+      /* Se ajusta a su contenido en vez de estirarse:
+         con una sola tarjeta evita el hueco vacio a la derecha.
+         Si algun dia se añade otra persona, se colocan juntas
+         y bajan de linea solas gracias al flex-wrap de arriba. */
+      flex: 0 1 auto;
     }
 
     .propietario-avatar {
@@ -1511,6 +1512,13 @@
         text-align: center;
       }
 
+      /* Aqui el texto va centrado, asi que la tarjeta tambien.
+         text-align no afecta a los elementos flex: hace falta
+         justify-content. */
+      .nosotros-propietarios {
+        justify-content: center;
+      }
+
       /*
         Antes habia aqui un "text-align: justify" que en pantallas estrechas
         abria huecos enormes entre palabras (efecto "rios" de espacio blanco).
@@ -1591,8 +1599,12 @@
         grid-template-columns: 1fr;
       }
 
+      /* En columna, el centrado lo controla align-items,
+         no justify-content. Sin esto la tarjeta se estiraria
+         a todo el ancho. */
       .nosotros-propietarios {
         flex-direction: column;
+        align-items: center;
       }
 
       .footer-grid {
@@ -1880,13 +1892,6 @@
 
         <!-- Propietarios -->
         <div class="nosotros-propietarios revelar">
-          <div class="propietario">
-            <div class="propietario-avatar" aria-hidden="true">MF</div>
-            <div class="propietario-info">
-              <strong>Miguel Fernando Cifuentes</strong>
-              <span>Co-fundador</span>
-            </div>
-          </div>
           <div class="propietario">
             <div class="propietario-avatar" aria-hidden="true">LV</div>
             <div class="propietario-info">
